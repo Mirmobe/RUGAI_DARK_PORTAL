@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #050605;
+  --color-panel: #0a100b;
+  --color-fg: #d9ffe4;
+  --color-phosphor: #39ff14;
+  --color-danger: #ff3b3b;
+  --color-dim: #1c3d1e;
+  --color-muted: #7dba8c;
+  --color-ink: #041004;
+  --font-display: "Chakra Petch", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-mono);
+    line-height: 1.5;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-phosphor);
+    outline-offset: 2px;
+  }
+}
+
+.crt {
+  position: relative;
+  isolation: isolate;
+}
+.crt::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  opacity: 0.35;
+  background: repeating-linear-gradient(#0000 0 2px, #00000047 2px 3px);
+}
+.bezel {
+  border: 1px solid var(--color-dim);
+  background:
+    linear-gradient(180deg, #39ff140d, transparent 5rem),
+    var(--color-panel);
+  box-shadow: inset 0 0 0 1px #39ff140d;
+}
+.risk-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-phosphor), var(--color-danger));
+}
+.live-dot {
+  animation: 1.6s steps(2, end) infinite blink;
+}
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .live-dot {
+    animation: none;
+  }
+  .crt::before {
+    display: none;
+  }
+}

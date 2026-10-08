@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="RUGAI">
+  <rect width="32" height="32" rx="7" fill="#050605"/>
+  <rect x="1.8" y="4.5" width="1.7" height="4.2" rx="0.4" fill="#39ff14" opacity="0.75"/>
+  <rect x="28.5" y="17.5" width="1.7" height="5" rx="0.4" fill="#39ff14" opacity="0.6"/>
+  <path d="M4.6 29.6h22.8L23 21H9z" fill="#0b140b" stroke="#39ff14" stroke-width="1.7" stroke-linejoin="round"/>
+  <rect x="7.2" y="3" width="17.6" height="16.6" rx="3.2" fill="#0b140b" stroke="#39ff14" stroke-width="1.9"/>
+  <rect x="10" y="9" width="4.8" height="2.8" rx="0.45" fill="#39ff14"/>
+  <rect x="17.2" y="9" width="4.8" height="2.8" rx="0.45" fill="#39ff14"/>
+  <circle cx="22.4" cy="23.4" r="5.5" fill="#ff2a2a"/>
+  <circle cx="22.4" cy="23.4" r="2.8" fill="none" stroke="#050605" stroke-width="1.2"/>
+</svg>
