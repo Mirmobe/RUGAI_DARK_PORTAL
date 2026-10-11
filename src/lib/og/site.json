@@ -1,5 +1,6 @@
 {
   "title": "RUGAI",
   "card": "custom",
-  "color": "050605"
+  "color": "050605",
+  "description": "Multi-chain rug-risk terminal for Solana, Base, Robinhood Chain and more."
 }
